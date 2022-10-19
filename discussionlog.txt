@@ -1,0 +1,15 @@
+Name: Apurva Gandhi
+Date: 02/17/2019
+Class: CSCI132 - 01
+Assignment 3
+
+
+Discussion Log: 
+I started working on this lab by myself. However, I came across few challenges which I couldn't figure out. Furthermore, I worked with Troy Gleason and we discussed about an appendFront function. We discussed various possibilities as well as logic behind the function. I fixed many of the errors by adding an extra function to print out the entries in queue. Printing entries from queue really helped me in debugging this program.
+
+I thought my program worked perfectly. However, despite it working as intended professor instructed me that this was the insufficient way to move append to the deque. I worked with Margaret Haley and we figured out append front in the most efficient way. Finally, I did not discussed with anyone else other than Troy and Margaret regarding this assignment.  
+
+Estimated Hours Spent: 
+6:00 pm to 9:00 pm on February 16th, 2019 at Okane B-32 lab
+10:00 pm to 2:30 pm on February 16th-17th, 2019 at Okane B-32 lab
+3:30 pm to 5:00 pm on February 21, 2019 at Swords 219

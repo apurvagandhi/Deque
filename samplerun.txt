@@ -1,0 +1,78 @@
+Name: Apurva Gandhi
+Class: CSCI132 - 01
+Date: 02/17/2019
+Assignment 3
+SAMPLE RUN
+
+ahgand22@mathcs234:~/assignments/assign3$ ./testDeque
+
+This program allows the user to enter one command
+(but only one)on each input line.
+For example, if the command S is entered, then
+the program will serve the front of the queue.
+
+ The valid commands are:
+A - Append the next input character to the rear.
+P - Push the next input character to the front.
+S - Serve the front of the queue
+X - Extract the rear of the queue
+R - Retrieve and print the front entry.
+W - Retrieve and write the rear entry.
+H - This help screen
+Q - Quit
+Press <Enter> to continue.
+Select command and press <Enter>: s
+Serve front failed, the deque is empty.
+
+Select command and press <Enter>: x
+Serve rear failed, the deque is empty.
+
+Select command and press <Enter>: r
+Deque is empty.
+
+Select command and press <Enter>: w
+Deque is empty.
+
+Select command and press <Enter>: a
+enter a new key to insert: 1
+1 appends to rear of deque.
+
+Select command and press <Enter>: a
+enter a new key to insert: 2
+2 appends to rear of deque.
+
+Select command and press <Enter>: a
+enter a new key to insert: 3
+3 appends to rear of deque.
+
+Select command and press <Enter>: r
+The first entry is: 1
+
+Select command and press <Enter>: w
+The last entry is: 3
+
+Select command and press <Enter>: p
+enter a new key to insert: 4
+4 appends to front of deque.
+
+Select command and press <Enter>: r
+The first entry is: 4
+
+Select command and press <Enter>: s
+Successfully served the front of the deque.
+
+Select command and press <Enter>: r
+The first entry is: 1
+
+Select command and press <Enter>: w
+The last entry is: 3
+
+Select command and press <Enter>: x
+Successfully served the rear of the deque.
+
+Select command and press <Enter>: w
+The last entry is: 2
+
+Select command and press <Enter>: q
+Deque demonstration finished.
+

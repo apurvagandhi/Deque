@@ -1,0 +1,95 @@
+/**************************************************************
+ * Filename: deque.cc
+ * Author: Apurva Gandhi
+ * Date: 02/18/2019
+ * Course: CSCI 132-01
+ * Purpose: extends the deque class and implements 
+ * more functions of queue class such as appending to the front,
+ * serving rear, and retrieving rear from the queue. 
+ **************************************************************/
+
+#include "deque.h"
+
+/***************************************************
+  Name: append_front(const Queue_entry &item)
+  Pre: None
+  Post:item is added to the front of the deque. If the deque is full
+  return an Error_code of overflow and leave the deque unchanged.
+***************************************************/
+Error_code Deque::append_front(const Queue_entry &item)
+{
+    if (count >= maxqueue)
+        return overflow;
+    count++;
+    
+    if(front == 0)
+        front = maxqueue - 1;
+    else
+        front = front  - 1;
+    entry[front] = item;
+	return success;
+}//end of append_front
+
+/***************************************************
+  Name: append_rear(const Queue_entry &item)
+  Pre: None
+  Post: Item is added to the rear of the deque. If the deque is full
+  return an Error_code of overflow and leave the deque unchanged.
+***************************************************/
+Error_code Deque::append_rear(const Queue_entry &item)
+{
+	return append(item);
+}//end append_rear
+
+/**************************************************
+  Name: serve_front(void)
+  Pre: None
+  Post: The front of the deque is removed. If the deque
+  is empty return an Error_code of underflow.
+***************************************************/
+Error_code Deque::serve_front(void)
+{
+	return serve();
+}//end serve_front()
+
+/***************************************************
+  Name: rear(void)
+  Pre: None
+  Post: The rear of the deque is removed. If the deque
+  is empty return an Error_code of underflow.
+***************************************************/
+Error_code Deque::serve_rear(void)
+{
+	if (count <= 0)
+		return underflow;
+	count--;
+    rear = rear - 1;
+	return success;
+}//end serve_rear
+
+/***************************************************
+  Name: retrieve_front(Queue_entry &item) const
+  Pre: None
+  Post: The front of the deque retrieved to the output
+  parameter item. If the deque is empty return an Error_code of underflow.
+***************************************************/
+Error_code Deque::retrieve_front(Queue_entry &item) const
+{
+	return retrieve(item);
+}//end retrieve_front
+
+/***************************************************
+  Name: retrieve_rear(Queue_entry &item) const
+  Pre: None
+  Post: The rear of the deque retrieved to the output
+  parameter item. If the deque is empty return an Error_code of underflow.
+***************************************************/
+Error_code Deque::retrieve_rear(Queue_entry &item) const
+{
+    if (count <= 0)
+        return underflow;
+    item = entry[rear];
+    return success;
+}//end of retrieve_rear
+//end of deque.cc
+
